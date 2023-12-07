@@ -7,6 +7,11 @@ We provide training scripts `./run.sh`. Training scripts call `./train.py` for t
 bash run.sh
 ```
 ### Evaluation
+Before evaluation, please download the evaluation datasets by running,
+```python
+cd SentEval/data/downstream/
+bash download_dataset.sh
+```
 Our evaluation code for sentence embeddings is based on a modified version of [SentEval](https://github.com/facebookresearch/SentEval). It evaluates sentence embeddings on semantic textual similarity (STS) tasks and downstream transfer tasks. For STS tasks, our evaluation takes the "all" setting and reports Spearman's correlation. 
 You can evaluate any transformers-based pre-trained models using our evaluation code. For example,
 ```python
